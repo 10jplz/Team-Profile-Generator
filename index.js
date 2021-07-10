@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHtml = require('./src/generateHTML');
+const generateHTML = require('./src/generateHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -110,7 +110,7 @@ function addEmployee(){
                         }
                     ]).then((response) => {
                         let newEmployee = new Intern(response.id, response.name, response.email, response.school)
-                        const generateCard = genarateHTML(newEmployee);
+                        const generateCard = generateHTML(newEmployee);
                         fs.appendFileSync("./src/store.js", `\n${generateCard}`);
                         console.log(newEmployee)
                         addEmployee();
