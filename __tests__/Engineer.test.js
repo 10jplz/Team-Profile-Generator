@@ -43,5 +43,15 @@ describe("engineer", () => {
             console.log(eEmail);
             console.log(nE);
         })
+
+    })
+
+    describe("role", () => {
+        it("Should return new Engineer Role", () => {
+            const eRole = "Engineer"
+            const nE = new Engineer("101", "Jose", "jose@email.com", eRole);
+            expect(nE.role).toBe("Engineer");
+            console.log(Engineer.role);
+        })
     })
 })
