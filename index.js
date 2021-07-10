@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateMarkdown = require('./src/generateMarkdown');
+const generateHtml = require('./src/generateHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -31,8 +31,8 @@ function addManager() {
     ]).then((response) => {
         let newEmployee = new Manager(response.id, response.name, response.email, response.officeNumber);
 
-        // const generateCard = generateHTML(newEmployee);
-        // fs.writeFileSync("./src/store.js", `\n${generateCard}`);
+        const generateCard = generateHTML(newEmployee);
+        fs.writeFileSync("./src/store.js", `\n${generateCard}`);
         console.log(newEmployee)
 
         addEmployee();
@@ -75,10 +75,10 @@ function addEmployee(){
                             name: 'githubUser',
                             message: "What is the Engineers github user name?"
                         }
-                    ]).then((resonse) => {
-                        let newEmployee = new Engineer(resonse.id, response.name, response.email, resonse.githubUser)
-                        // const generateCard = generateHTML(newEmployee);
-                        // fs.writeFileSync("./src/store.js", `\n${generateCard}`);
+                    ]).then((response) => {
+                        let newEmployee = new Engineer(response.id, response.name, response.email, response.githubUser)
+                        const generateCard = generateHTML(newEmployee);
+                        fs.appendFileSync("./src/store.js", `\n${generateCard}`);
                         console.log(newEmployee)
                         addEmployee();
 
@@ -105,13 +105,13 @@ function addEmployee(){
                         },
                         {
                             type: 'input',
-                            name: 'githubUser',
+                            name: 'school',
                             message: "What is the Intern's school?"
                         }
                     ]).then((response) => {
                         let newEmployee = new Intern(response.id, response.name, response.email, response.school)
-                        // const generateCard = genarateHTML(newEmployee);
-                        // fs.writeFileSync("./src/store.js", `\n${generateCard}`);
+                        const generateCard = genarateHTML(newEmployee);
+                        fs.appendFileSync("./src/store.js", `\n${generateCard}`);
                         console.log(newEmployee)
                         addEmployee();
                     });
