@@ -1,19 +1,19 @@
 
 
-const jose = `
+const Jose = `
 <div class='card' style='width: 18rem;'>
 <div class='card-header'>
-<h2>jose</h2>
+<h2>Jose 1</h2>
 <h3>Manager</h3>
 </div>  
 <div class='card-body'>    
 <p class='card-text'>Employee ID: 1</p>
-<p class='card-text'>Email: <a href='mailto:jose@email.com'>jose@email.com</a></p>
-<p class='card-text'>Office Number: d</p>
+<p class='card-text'>Email: <a href='mailto:Jose@email.com'>Jose@email.com</a></p>
+<p class='card-text'>Office Number: D</p>
 </div>
 </div>`
 $(".card-deck").empty();
-$(".card-deck").append(jose)
+$(".card-deck").append(Jose)
 
 const Max = `
 <div class='card' style='width: 18rem;'>
@@ -23,8 +23,8 @@ const Max = `
 </div>  
 <div class='card-body'>    
 <p class='card-text'>Employee ID: 2</p>
-<p class='card-text'>Email: <a href='mailto:maxi@email.com'>maxi@email.com</a></p>
-<p class='card-text'>GitHib: <a href='https://github.com/10jplz' target='_blank'>10jplz</a></p>
+<p class='card-text'>Email: <a href='mailto:Max@email.com'>Max@email.com</a></p>
+<p class='card-text'>GitHib: <a href='https://github.com/10jplz@gmail.com' target='_blank'>10jplz@gmail.com</a></p>
 </div>
 </div>`
 $(".card-deck").append(Max)
@@ -36,9 +36,9 @@ const Brandy = `
 <h3>Intern</h3>
 </div>  
 <div class='card-body'>    
-<p class='card-text'>Employee ID: 5</p>
-<p class='card-text'>Email: <a href='mailto:brandy@email.com'>brandy@email.com</a></p>
-<p class='card-text'>School: uofu</p>
+<p class='card-text'>Employee ID: 3</p>
+<p class='card-text'>Email: <a href='mailto:Brandy@email.com'>Brandy@email.com</a></p>
+<p class='card-text'>School: SLCC</p>
 </div>
 </div>`
 $(".card-deck").append(Brandy)
