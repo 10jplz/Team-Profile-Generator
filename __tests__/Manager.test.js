@@ -47,7 +47,7 @@ describe("Manager", () => {
         it("Should return new Manager Role", () => {
             const eRole = "Manager"
             const nE = new Manager("101", "Jose", "jose@email.com", eRole);
-            expect(nE.role).toBe("Engineer");
+            expect(nE.role).toBe("Manager");
             console.log(Manager.role);
         })
     })
