@@ -7,7 +7,7 @@ if(addEmployee.role === "Manager") {
 //generate code to go in index.html
 return (`
 const ${addEmployee.name} = \`
-<div class='card' style='width: 18rem;'>
+<div class='card text-white bg-primary mb-3' style='width: 18rem;'>
 <div class='card-header'>
 <h2>${addEmployee.name} ${addEmployee.id}</h2>
 <h3>${addEmployee.role}</h3>
@@ -27,7 +27,7 @@ else if(addEmployee.role === "Engineer"){
 
 return (`
 const ${addEmployee.name} = \`
-<div class='card' style='width: 18rem;'>
+<div class='card text-white bg-primary mb-3' style='width: 18rem;'>
 <div class='card-header'>
 <h2>${addEmployee.name}</h2>
 <h3>${addEmployee.role}</h3>
@@ -45,7 +45,7 @@ else if(addEmployee.role === "Intern"){
 
 return (`
 const ${addEmployee.name} = \`
-<div class='card' style='width: 18rem;'>
+<div class='card text-white bg-primary mb-3' style='width: 18rem;'>
 <div class='card-header'>
 <h2>${addEmployee.name}</h2>
 <h3>${addEmployee.role}</h3>
